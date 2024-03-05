@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed7a609c-def3-4e0c-a422-9bcb9fd4a1d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/he/arc/Main.java" afterDir="false" />
+    <list default="true" id="ed7a609c-def3-4e0c-a422-9bcb9fd4a1d3" name="Changes" comment="first real commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/he/arc/Mock/GameMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/business/GameMockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/he/arc/business/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/he/arc/business/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +19,28 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Briefgarde"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d4498f08-7dad-475f-83f0-7b1769b973b1" />
+        <option name="url" value="https://github.com/Briefgarde/bowlingkata.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -38,38 +51,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.test_FizzBuzz.FizzBuzz_test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test_FizzBuzz.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test_FizzBuzz.fizzBuzzList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test_FizzBuzz.fizzBuzzList_Given5_2_ShouldbeAList.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.test_FizzBuzz.fizzBuzz_Given6_ShouldBe6.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.test_FizzBuzz.fizzBuzz_GivenException_ShouldBeException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test_FizzBuzz.fizzBuzz_GivenNumber_ShouldBeCorrect.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test_FizzBuzz.testFizzBuzz.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test_game.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test_game.score_Given20rolls_at_0_shouldbe0.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.test_game.score_Given20rolls_at_1_shouldbe20.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test_game.score_Given_1spare_thenroll3_shouldbe16.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.4402299&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "JUnit.GameMockTest.gameConstructor_GivenTableau_ShouldUseSeConnecter.executor": "Run",
+    "JUnit.test_FizzBuzz.FizzBuzz_test.executor": "Run",
+    "JUnit.test_FizzBuzz.executor": "Run",
+    "JUnit.test_FizzBuzz.fizzBuzzList.executor": "Run",
+    "JUnit.test_FizzBuzz.fizzBuzzList_Given5_2_ShouldbeAList.executor": "Debug",
+    "JUnit.test_FizzBuzz.fizzBuzz_Given6_ShouldBe6.executor": "Debug",
+    "JUnit.test_FizzBuzz.fizzBuzz_GivenException_ShouldBeException.executor": "Run",
+    "JUnit.test_FizzBuzz.fizzBuzz_GivenNumber_ShouldBeCorrect.executor": "Run",
+    "JUnit.test_FizzBuzz.testFizzBuzz.executor": "Run",
+    "JUnit.test_game.executor": "Run",
+    "JUnit.test_game.score_Given20rolls_at_0_shouldbe0.executor": "Debug",
+    "JUnit.test_game.score_Given20rolls_at_1_shouldbe20.executor": "Run",
+    "JUnit.test_game.score_Given_1spare_thenroll3_shouldbe16.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4402299",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -78,7 +92,7 @@
       <recent name="he.arc" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.test_game.score_Given_1spare_thenroll3_shouldbe16">
+  <component name="RunManager" selected="JUnit.GameMockTest.gameConstructor_GivenTableau_ShouldUseSeConnecter">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-18" />
       <option name="MAIN_CLASS_NAME" value="he.arc.Main" />
@@ -93,22 +107,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameMockTest.gameConstructor_GivenTableau_ShouldUseSeConnecter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ex_1_pratiqueDeDev_Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="business" />
+      <option name="MAIN_CLASS_NAME" value="business.GameMockTest" />
+      <option name="METHOD_NAME" value="gameConstructor_GivenTableau_ShouldUseSeConnecter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test_FizzBuzz" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Ex_1_pratiqueDeDev_Test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="test_FizzBuzz" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test_FizzBuzz.fizzBuzzList_Given5_2_ShouldbeAList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Ex_1_pratiqueDeDev_Test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test_FizzBuzz" />
-      <option name="METHOD_NAME" value="fizzBuzzList_Given5_2_ShouldbeAList" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,19 +212,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.test_FizzBuzz" />
+      <item itemvalue="JUnit.GameMockTest.gameConstructor_GivenTableau_ShouldUseSeConnecter" />
       <item itemvalue="JUnit.test_game" />
       <item itemvalue="JUnit.test_game.score_Given20rolls_at_0_shouldbe0" />
       <item itemvalue="JUnit.test_game.score_Given20rolls_at_1_shouldbe20" />
       <item itemvalue="JUnit.test_game.score_Given_1spare_thenroll3_shouldbe16" />
-      <item itemvalue="JUnit.test_FizzBuzz.fizzBuzzList_Given5_2_ShouldbeAList" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameMockTest.gameConstructor_GivenTableau_ShouldUseSeConnecter" />
         <item itemvalue="JUnit.test_game.score_Given_1spare_thenroll3_shouldbe16" />
         <item itemvalue="JUnit.test_game.score_Given20rolls_at_1_shouldbe20" />
         <item itemvalue="JUnit.test_game" />
         <item itemvalue="JUnit.test_game.score_Given20rolls_at_0_shouldbe0" />
-        <item itemvalue="JUnit.test_FizzBuzz.fizzBuzzList_Given5_2_ShouldbeAList" />
       </list>
     </recent_temporary>
   </component>
@@ -238,12 +258,47 @@
       <workItem from="1709639636595" duration="2251000" />
       <workItem from="1709645517444" duration="130000" />
       <workItem from="1709645840801" duration="2538000" />
-      <workItem from="1709649865657" duration="309000" />
+      <workItem from="1709649865657" duration="2345000" />
     </task>
+    <task id="LOCAL-00001" summary="first real commit">
+      <option name="closed" value="true" />
+      <created>1709650253838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709650253839</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first real commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first real commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/business/GameMockTest.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

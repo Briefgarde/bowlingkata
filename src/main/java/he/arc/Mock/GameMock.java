@@ -1,21 +1,25 @@
-package he.arc.business;
+package he.arc.Mock;
+
+import he.arc.business.Frame;
+import he.arc.business.TableauAffichage;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-public class Game {
+public class GameMock {
     public List<Frame> frames;
     private int nbRoll;
     private boolean secondRoll;
     public TableauAffichage tableauAffichage;
-    public Game(){
+    public GameMock(TableauAffichage tableauAffichage){
         frames = new ArrayList<>();
         for (int i = 0;i<10;i++){
             frames.add(new Frame());
         }
         nbRoll = 0;
         secondRoll = false;
+        tableauAffichage = tableauAffichage;
+        tableauAffichage.seConnecter();
     }
 
     public void roll(int pins){
