@@ -6,12 +6,7 @@ public class Frame {
     private Roll roll2 = new Roll();
     public Frame(){}
     public int score(){
-
-        if (roll1.getPins() == -1){
-            return 0;
-        }
-        int score = roll1.getPins() + roll2.getPins();
-        return score;
+        return roll1.getPins() + roll2.getPins();
     }
 
     public boolean isSpare(){

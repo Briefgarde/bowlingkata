@@ -4,7 +4,7 @@ public class Roll {
     private int pins;
 
     public Roll(){
-        pins = -1;
+        pins = 0;
     }
     public int getPins() {
         return pins;

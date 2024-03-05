@@ -1,37 +1,41 @@
 package he.arc.business;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Game {
     public List<Frame> frames;
     private int nbRoll;
-    private boolean secondRoll;
+
     public TableauAffichage tableauAffichage;
-    public Game(){
+
+    public Game() {
         frames = new ArrayList<>();
-        for (int i = 0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
             frames.add(new Frame());
         }
         nbRoll = 0;
-        secondRoll = false;
+
     }
 
-    public void roll(int pins){
-        for (Frame frame : frames){
-            if (frame.getRoll1().getPins() == -1) {
-                frame.getRoll1().setPins(pins);
-                break;
-            } else if ((frame.getRoll2().getPins() == -1) && (frame.getRoll1().getPins() != 10)) {
-                frame.getRoll2().setPins(pins);
-                break;
+    public void roll(int pins) {
+        Frame currentFrame = frames.get(nbRoll / 2);
+        if (nbRoll % 2 == 0) {
+            currentFrame.getRoll1().setPins(pins);
+            if (pins == 10) { // Strike
+                nbRoll += 2;
+            } else {
+                nbRoll++;
             }
+        } else {
+            currentFrame.getRoll2().setPins(pins);
+            nbRoll++;
         }
     }
-    public int score(){
+
+    public int score() {
         int score = 0;
-        for (int i = 0; i < frames.size(); i++){
+        for (int i = 0; i < frames.size(); i++) {
             Frame frame = frames.get(i);
             if (frame.isStrike()) {
                 score += 10;
@@ -39,7 +43,7 @@ public class Game {
                     score += frames.get(i + 1).getRoll1().getPins();
                     if (frames.get(i + 1).isStrike() && i + 2 < frames.size()) {
                         score += frames.get(i + 2).getRoll1().getPins();
-                    } else {
+                    } else if (i + 1 < frames.size()) {
                         score += frames.get(i + 1).getRoll2().getPins();
                     }
                 }
@@ -55,9 +59,9 @@ public class Game {
         return score;
     }
 
-    public void clear(){
+    public void clear() {
         frames = new ArrayList<>();
-        for (int i = 0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
             frames.add(new Frame());
         }
     }
